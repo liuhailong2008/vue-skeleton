@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>User List</title>
+	<meta charset="UTF-8" />
+	<link href="stylesheets/default.css" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+<div id="userList">
+	<div><h1>{{ title }}</h1></div>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Mobile</th>
+		</tr>
+		<tr v-for="row in rows">
+			<td>{{ row.name }}</td>
+			<td>{{ row.addr }}</td>
+			<td><input v-model='row.mobile' /></td>
+		</tr>
+	</table>	
+	<paging v-bind:data="paging" />
+</div>
+<button onclick="submitUserList()">Submit</button>
+
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/fetch.js"></script>
+<script src="javascripts/vue-common.js"></script>
+<script>
+	var vueObj ;
+	loadList("#userList","users/userList",function(obj){
+		vueObj = obj;
+	});
+	function submitUserList(){
+		var data = vueObj.$data ;
+		console.log(data);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"title" : "User List",
+	"rows": [
+      { "name": "Liu Hailong" , "addr" : "Laishui", "mobile" : "186" },
+      { "name": "Wei Chao" , "addr" : "Yangzonghai", "mobile" : "186" },
+      { "name": "Hu Lei" , "addr" : "Guiyang", "mobile" : "188" }
+    ],
+	"paging" : {
+		"total" : 3,
+		"pageSize" : 10,
+		"pageNo" : 1 ,
+		"pageCnt" : 1
+	}
+}
